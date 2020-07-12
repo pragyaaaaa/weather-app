@@ -1,0 +1,145 @@
+
+* {
+    font-family: "Lucida Console", Courier, monospace;
+    color: black;
+}
+@keyframes forcontainer {
+    from {background-color: rgb(174, 219, 245);}
+    to {background-color: rgb(234, 238, 241);}
+  }
+  @keyframes forweathercontainer {
+    from {background-color: rgb(234, 238, 241);}
+    to {background-color: rgb(174, 219, 245);}
+    
+  }
+.earth {
+  --d:450px;
+  position: fixed;
+  top: 52%;
+  left: 49%;
+  transform: translate(-51.5%, -60%);
+  width: var(--d);
+  height:var(--d);
+  display:inline-block;
+  margin: 5px;
+  border-radius: 50%;
+  box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+  background: 
+    url(https://i.stack.imgur.com/3SLqF.jpg)
+    0/auto 100%;
+  animation: spin 3s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes spin {
+  to {
+    background-position:200% 0;
+  }
+}
+
+.container {
+  width: 50%;
+  border-radius: 50%;
+  height: 50%;
+  background:transparent;
+  /* for fixing container to center*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.app-title {
+  width: auto;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+}
+
+.app-title p {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.notification {
+  background-color: #f8d7da;
+  display: none;
+}
+
+.notification p {
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.weather-container {
+  width: 70%;
+  border-radius: 50%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   /* background-color: #a9a7ec; */
+   background: transparent;
+  /* animation: forweathercontainer 5s infinite;
+  animation-direction:alternate-reverse; */
+}
+
+.weather-icon {
+  width: auto;
+  height: 128px;
+}
+
+.weather-icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.temperature-value {
+  width: auto;
+  height: 60px;
+}
+
+.temperature-value p {
+  padding: 0;
+  margin: 0;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.temperature-value p:hover {
+}
+
+.temperature-value span {
+  font-size: 0.5em;
+}
+
+.temperature-description {
+}
+
+.temperature-description p {
+  padding: 8px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.location {
+}
+
+.location p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.8em;
+}
